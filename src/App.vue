@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>жопа</h1>
 <v-header />
 <v-nav-carousel />
 <v-catalog />
