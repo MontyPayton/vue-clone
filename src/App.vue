@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>жопа большая</h1>
+    <h1>жопа большая и маленькая</h1>
 <v-header />
 <v-nav-carousel />
 <v-catalog />
