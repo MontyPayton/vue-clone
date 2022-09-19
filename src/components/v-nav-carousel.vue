@@ -10,6 +10,7 @@
     <button>пещеры</button>
     <button>замки</button>
     <button>кемпинги</button>
+    <button>горы</button>
   </div>
 </template>
 
