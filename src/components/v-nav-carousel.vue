@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="v-nav-carousel">
     <button>деревянный дом</button>
     <button>на острове</button>
     <button>бассейны</button>
@@ -21,5 +21,8 @@ export default {
 </script>
 
 <style>
-
+.v-nav-carousel {
+  margin: 0 auto;
+  text-align: center;
+}
 </style>

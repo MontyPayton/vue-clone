@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>жопа большая и маленькая</h1>
+    <h1>{{title}}</h1>
 <v-header />
 <v-nav-carousel />
 <v-catalog />
@@ -22,7 +22,21 @@
       vNavCarousel,
       vCatalog,
      
-    }
+    },
+    props:{
+
+    },
+    data(){
+      return{
+title:"Жопа большая и маленькая!"
+      }
+    },
+    computed:{
+
+    },
+    methods:{
+
+    },
   }
 </script>
 <style >
