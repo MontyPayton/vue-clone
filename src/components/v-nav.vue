@@ -26,7 +26,5 @@ export default {
     float: right;
 
 }
-.but3{
-   
-}
+
 </style>
