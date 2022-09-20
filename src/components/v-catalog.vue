@@ -5,6 +5,7 @@
     v-for="produkt in produkts"
     :key="produkt.article"
     :produkt_data="produkt"
+    @article="showArticle"
     />
   </div>
 </template>
@@ -29,7 +30,12 @@ data(){
       {image:"6.jpg",country:"Китай", name:"Яньхунь",date:"12 октября",price:700,article:"6"},
     ]
   }
-}
+},
+methods: {
+  showArticle(data){
+    console.log(data)
+  }
+},
 }
 </script>
 
