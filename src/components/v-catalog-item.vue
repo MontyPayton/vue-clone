@@ -1,5 +1,6 @@
 <template>
-  <div class="v-catalog-item" @click="openProduct">
+  <div class="v-catalog-item" @click="openPopap">
+  <v-popap-vue />
     <img class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
     <p class="v-catalog-item-country">{{produkt_data.country}}</p>
     <p class="v-catalog-item-name">{{produkt_data.name}}</p>
@@ -9,7 +10,15 @@
 </template>
 
 <script>
+  
+import vPopapVue from './popap/v-popap.vue'; 
+
 export default {
+  components: {
+  
+  vPopapVue
+  },
+
 props:{
   produkt_data:{
 type: Object,
@@ -19,7 +28,7 @@ default(){
   }
 },
 methods: {
-  openProduct(){
+  openPopap(){
     console.log('kkk');
     this.$emit(  'article',this.produkt_data.article)
   }

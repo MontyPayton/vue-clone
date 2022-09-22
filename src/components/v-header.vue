@@ -1,8 +1,12 @@
 <template>
+    <div>
   <div class="v-head">
  <v-logo-vue />
  <v-nav-vue />
  <v-profile-vue />
+
+    </div>
+     <hr>
     </div>
 </template>
 

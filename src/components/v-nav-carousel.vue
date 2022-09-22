@@ -1,7 +1,8 @@
 <template>
   <div class="v-nav-carousel">
-    <button>деревянный дом</button>
-    <button>на острове</button>
+    <button><router-link class="rl" to="/">домашняя</router-link></button>
+    <button><router-link class="rl" to="/v-wooden-house">деревянный дом</router-link></button>
+    <button><router-link class="rl" to="/v-on-the-island">на острове</router-link> </button>
     <button>бассейны</button>
     <button>пляж</button>
     <button>лес</button>
@@ -22,7 +23,11 @@ export default {
 
 <style>
 .v-nav-carousel {
-  margin: 0 auto;
+  margin: 25px 0;
   text-align: center;
+}
+.rl {
+  text-decoration:none;
+  color: black;
 }
 </style>

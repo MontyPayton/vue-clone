@@ -3,7 +3,7 @@
     <h1>{{title}}</h1>
 <v-header />
 <v-nav-carousel />
-<v-catalog />
+<router-view />
 
    
   </div>

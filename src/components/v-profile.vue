@@ -2,11 +2,13 @@
   <div class="v-profile">
     <div>Сдайте жильё</div>
     <div>
-        <img src="../assets/iconsZ.png" alt="">
+        <span class="material-icons">
+language
+</span>
     </div>
     <button>
         <div>гамб</div>
-        <div>икон</div>
+        <span class="material-icons">person</span>
     </button>
     </div>
 </template>
