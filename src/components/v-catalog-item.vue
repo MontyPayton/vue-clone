@@ -1,7 +1,19 @@
 <template>
-  <div class="v-catalog-item" @click="openPopap">
-  <v-popap-vue />
-    <img class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
+  <div class="v-catalog-item" >
+  <v-popap-vue 
+  v-if="isInfoPopup"
+  @closePopup = "closeIPopup"
+  >
+  <img @click="openIPopup" class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
+  <div>
+    <p class="v-catalog-item-country">{{produkt_data.country}}</p>
+    <p class="v-catalog-item-name">{{produkt_data.name}}</p>
+    <p class="v-catalog-item-date">{{produkt_data.date}}</p>
+    <p class="v-catalog-item-price">{{produkt_data.price}} руб.</p>
+  </div>
+    
+  </v-popap-vue>
+    <img @click="openIPopup" class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
     <p class="v-catalog-item-country">{{produkt_data.country}}</p>
     <p class="v-catalog-item-name">{{produkt_data.name}}</p>
     <p class="v-catalog-item-date">{{produkt_data.date}}</p>
@@ -27,10 +39,20 @@ default(){
 }
   }
 },
+data() {
+  return {
+    isInfoPopup: false
+  }
+},
 methods: {
-  openPopap(){
-    console.log('kkk');
-    this.$emit(  'article',this.produkt_data.article)
+  openIPopup(){
+    this.isInfoPopup= true;
+    
+  },
+  closeIPopup(){
+
+    this.isInfoPopup= false;
+    
   }
 },
 }

@@ -3,7 +3,12 @@
     <div class="v-popap-header">
         <span>name popap</span>
         <span>
-            <i class="material-icons">close</i>
+            <i 
+            class="material-icons"
+            @click='closePopup'
+            >
+            close
+          </i>
         </span>
     </div>
     <div class="v-popap-content">
@@ -16,12 +21,22 @@
 
 <script>
 export default {
+methods:{
+  closePopup(){
+this.$emit('closePopup')
 
+  }
+}
 }
 </script>
 
 <style>
 .v-popap{
   position: fixed;
+  box-shadow: 0 0 17px;
+  padding: 16px;
+  width: 400px;
+  top:50px;
+  background-color: white;
 }
 </style>
