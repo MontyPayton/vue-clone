@@ -28,7 +28,7 @@
     },
     data(){
       return{
-title:"Жопа большая!"
+title:"Проект изменен!"
       }
     },
     computed:{
