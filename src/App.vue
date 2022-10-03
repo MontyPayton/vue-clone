@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <h1>{{title}}</h1>
+    
 <v-header />
 <v-nav-carousel />
+
 <router-view />
 
    
@@ -44,5 +45,6 @@ title:"Проект изменен!"
   max-width: 900px;
   margin: 0 auto;
 }
+
 
 </style>

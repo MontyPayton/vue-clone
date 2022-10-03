@@ -2,6 +2,7 @@
   <div class="v-catalog-item" >
   <v-popap-vue 
   v-if="isInfoPopup"
+ :popapTatle="produkt_data.name"
   @closePopup = "closeIPopup"
   >
   <img @click="openIPopup" class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
@@ -9,15 +10,17 @@
     <p class="v-catalog-item-country">{{produkt_data.country}}</p>
     <p class="v-catalog-item-name">{{produkt_data.name}}</p>
     <p class="v-catalog-item-date">{{produkt_data.date}}</p>
-    <p class="v-catalog-item-price">{{produkt_data.price}} руб.</p>
+    <p class="v-catalog-item-price">{{produkt_data.price}} руб./сутки</p>
+  <p class="v-catalog-item-category">Категория: {{produkt_data.category}}, {{produkt_data.category2}}</p>
+  <button>Забронировать</button>
   </div>
     
-  </v-popap-vue>
+   </v-popap-vue>
     <img @click="openIPopup" class="img-item" :src="require('../assets/imadg/'+ produkt_data.image)" alt="img">
-    <p class="v-catalog-item-country">{{produkt_data.country}}</p>
-    <p class="v-catalog-item-name">{{produkt_data.name}}</p>
-    <p class="v-catalog-item-date">{{produkt_data.date}}</p>
-    <p class="v-catalog-item-price">{{produkt_data.price}} руб.</p>
+    <p class="v-catalog-item-country">Страна: {{produkt_data.country}}</p>
+    <p class="v-catalog-item-name">Город: {{produkt_data.name}}</p>
+    <p class="v-catalog-item-date">дата поездки: {{produkt_data.date}}</p>
+    <p class="v-catalog-item-category">стоимость за ночь: {{produkt_data.price}} руб.</p> 
   </div>
 </template>
 
@@ -66,10 +69,13 @@ methods: {
   box-shadow: 0 0 8px;
   cursor: pointer;
 }
-
+p{
+   font-weight: bold;
+}
 
   .v-catalog-item-country{
     font-size: medium;
+   
   }
   .img-item{
     width: 250px;
