@@ -13,7 +13,7 @@
 <script>
   import VCatalogItem from './v-catalog-item'
   import vCatalogItem from './v-catalog-item.vue'
-  import { mapActions, mapGetters } from 'vuex'
+  import { mapActions } from 'vuex'
 export default {
   components: { VCatalogItem },
 comments:{
@@ -26,7 +26,7 @@ data(){
   }
 },
 computed:{
-  ...mapGetters([
+  ...mapActions([
     "PRODUCTS"
   ])
 },
