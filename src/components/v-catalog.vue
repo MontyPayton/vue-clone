@@ -2,10 +2,10 @@
   <div class="v-catalog">
     
     <v-catalog-item 
-    v-for="produkt in PRODUCTS"
-    :key="produkt.article"
+    v-for="produkt in count"
+    :key="produkt.id"
     :produkt_data="produkt"
-    @article="showArticle"
+    
     />
   </div>
 </template>
@@ -20,26 +20,23 @@ comments:{
   vCatalogItem
 },
 data(){
-  return{
-
-
-  }
+  return{}
 },
+
 computed:{
-  ...mapActions([
-    "PRODUCTS"
-  ])
-},
+  count () {
+      return this.$store.state.products
+    }
+  },
+
 methods: {
   ...mapActions([
-"GET_PRODUCTS_API"
+"GET_API"
   ]),
-  showArticle(data){
-    console.log(data)
-  }
+ 
 },
 mounted(){
-  this.GET_PRODUCTS_API()
+  this.GET_API()
 }
 }
 </script>

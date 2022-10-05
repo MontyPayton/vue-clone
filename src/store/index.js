@@ -9,30 +9,17 @@ export default new Vuex.Store({
     products: []
   },
   getters: {
-    PRODUCTS(state){
-      return state.products;
-    }
+   
   },
-  mutations: {
-    SET_PRODUKTS_TO_STATE:(state ,products)=>{
-      state.products=products
-    }
-    
+  actions:{
+    GET_API({commit}) {
+      return axios.get('http://localhost:3000/produkts')
+        .then((response) => {commit('SET', response.data)})
+  }
   },
-  actions: {
-    GET_PRODUCTS_API({commit}){
-      return axios('http://localhost:3000/produkts',{
-        method:"GET"
-      })
-      .then((products) =>{
-        
-        commit('SET_PRODUKTS_TO_STATE', products.data)
-        return products;
-      })
-      .catch((error)=>{
-        console.log(error);
-        return error;
-      })
+  mutations:{
+    SET:(state, products)=>{
+      state.products=products;
     }
   },
   modules: {
